@@ -17,6 +17,7 @@ sudo add-apt-repository -y ppa:noobslab/themes &&
 sudo apt update &&
 sudo apt install -y nautilus-dropbox virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make synapse albert dconf-editor nodejs-legacy &&
 
+
 # Meteor
 curl https://install.meteor.com/ | sh &&
 
@@ -55,3 +56,4 @@ sudo apt-get -y autoremove &&
 
 # Store github creds
 git config credential.helper store
+
