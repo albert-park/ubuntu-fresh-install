@@ -15,7 +15,7 @@ sudo add-apt-repository -y ppa:noobslab/themes &&
 
 # Install programs
 sudo apt update &&
-sudo apt install -y nautilus-dropbox virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make synapse albert dconf-editor nodejs-legacy screenfetch &&
+sudo apt install -y nautilus-dropbox virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make synapse albert dconf-editor nodejs-legacy screenfetch psensor &&
 
 
 # Meteor
