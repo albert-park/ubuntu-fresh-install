@@ -15,7 +15,7 @@ sudo add-apt-repository -y ppa:noobslab/themes &&
 
 # Install programs
 sudo apt update &&
-sudo apt install -y nautilus-dropbox virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make synapse albert dconf-editor nodejs-legacy screenfetch psensor &&
+sudo apt install -y nautilus-dropbox virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor &&
 
 
 # Meteor
@@ -28,6 +28,10 @@ sudo dpkg -i sublime-text_build-3114_amd64.deb &&
 # Slack 
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.0.6-amd64.deb &&
 sudo dpkg -i slack-desktop-2.0.6-amd64.deb && 
+
+# Ghost desktop
+wget http://desktop-updates.ghost.org/download/linux &&
+sudo dpkg -i linux
 
 # Spotify
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 &&
