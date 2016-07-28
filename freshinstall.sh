@@ -26,8 +26,8 @@ wget https://download.sublimetext.com/sublime-text_build-3114_amd64.deb &&
 sudo dpkg -i sublime-text_build-3114_amd64.deb &&
 
 # Slack 
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.0.6-amd64.deb &&
-sudo dpkg -i slack-desktop-2.0.6-amd64.deb && 
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.1.0-amd64.deb &&
+sudo dpkg -i slack-desktop-2.1.0-amd64.deb && 
 
 # Ghost desktop
 wget http://desktop-updates.ghost.org/download/linux &&
