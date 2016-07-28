@@ -19,7 +19,7 @@ sudo apt install -y nautilus-dropbox virtualbox chromium-browser keepassx unity-
 
 
 # Meteor
-curl https://install.meteor.com/ | sh &&
+# curl https://install.meteor.com/ | sh &&
 
 # Sublime Text
 wget https://download.sublimetext.com/sublime-text_build-3114_amd64.deb &&
@@ -47,11 +47,11 @@ sudo tlp start &&
 umake ide visual-studio-code &&
 
 # NVM
-https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash &&
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash &&
 
 # Remove debs
 sudo rm sublime-text_build-3114_amd64.deb &&
-sudo rm slack-desktop-2.0.6-amd64.deb &&
+sudo rm slack-desktop-2.1.0-amd64.deb &&
 
 sudo apt update && 
 sudo apt -y upgrade && 
