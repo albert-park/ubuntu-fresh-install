@@ -44,7 +44,9 @@ sudo apt -y install spotify-client &&
 sudo tlp start &&
 
 # Ubuntu Make software
-umake ide visual-studio-code &&
+# umake ide visual-studio-code &&
+wget https://go.microsoft.com/fwlink/?LinkID=760868 &&
+sudo dpkg -i code_1.4.0-1470329130_amd64.deb &&
 
 # NVM
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash &&
