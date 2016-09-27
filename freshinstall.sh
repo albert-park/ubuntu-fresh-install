@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Software Versions
-sublime=sublime-text_build-3114_amd64.deb
+sublime=sublime-text_build-3126_amd64.deb
 slack=slack-desktop-2.1.2-amd64.deb
 vscode=index.html?LinkID=760868
 
 # Initialize
 sudo apt update &&
-sudo apt -y upgrade && 
-sudo apt -y dist-upgrade && 
+sudo apt -y upgrade &&
+sudo apt -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 
 # Add repos
@@ -33,9 +33,9 @@ sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser 
 wget https://download.sublimetext.com/$sublime &&
 sudo dpkg -i $sublime &&
 
-# Slack 
+# Slack
 wget https://downloads.slack-edge.com/linux_releases/$slack &&
-sudo dpkg -i $slack && 
+sudo dpkg -i $slack &&
 
 # Visual Studio Code
 wget https://go.microsoft.com/fwlink/?LinkID=760868 &&
@@ -54,9 +54,9 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | b
 # Remove debs
 sudo rm $sublime $slack $vscode &&
 
-sudo apt update && 
-sudo apt -y upgrade && 
-sudo apt -y dist-upgrade && 
+sudo apt update &&
+sudo apt -y upgrade &&
+sudo apt -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 
 # Store github creds
