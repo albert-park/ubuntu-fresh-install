@@ -60,5 +60,11 @@ sudo apt -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 
 # Store github creds
-git config credential.helper store
+git config credential.helper store &&
+
+# Swappiness
+sudo bash -c "echo 'vm.swappiness = 15' >> /etc/sysctl.conf" &&
+
+# Reboot
+sudo reboot
 
