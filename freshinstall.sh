@@ -2,7 +2,7 @@
 
 # Software Versions
 sublime=sublime-text_build-3126_amd64.deb
-slack=slack-desktop-2.1.2-amd64.deb
+slack=slack-desktop-2.3.4-amd64.deb
 vscode=index.html?LinkID=760868
 
 # Initialize
@@ -24,7 +24,7 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 # Install programs
 sudo apt update &&
-sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor &&
+sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon &&
 
 # Meteor
 # curl https://install.meteor.com/ | sh &&
@@ -63,7 +63,7 @@ sudo apt-get -y autoremove &&
 git config credential.helper store &&
 
 # Swappiness
-sudo bash -c "echo 'vm.swappiness = 15' >> /etc/sysctl.conf" &&
+sudo bash -c "echo 'vm.swappiness = 10' >> /etc/sysctl.conf" &&
 
 # Reboot
 sudo reboot
