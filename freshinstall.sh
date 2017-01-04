@@ -17,6 +17,7 @@ sudo add-apt-repository -y ppa:synapse-core/testing &&
 sudo add-apt-repository -y ppa:ubuntu-desktop/ubuntu-make &&
 sudo add-apt-repository -y ppa:nilarimogard/webupd8 &&
 sudo add-apt-repository -y ppa:noobslab/themes &&
+sudo apt-add-repository -y ppa:teejee2008/ppa &&
 
 # Spotify
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 &&
@@ -24,7 +25,7 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 # Install programs
 sudo apt update &&
-sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon &&
+sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu &&
 
 # Meteor
 # curl https://install.meteor.com/ | sh &&
