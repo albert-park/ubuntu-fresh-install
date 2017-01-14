@@ -3,7 +3,7 @@
 # Software Versions
 sublime=sublime-text_build-3126_amd64.deb
 slack=slack-desktop-2.3.4-amd64.deb
-vscode=index.html?LinkID=760868
+vscode=code*
 
 # Initialize
 sudo apt update &&
@@ -25,7 +25,7 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 # Install programs
 sudo apt update &&
-sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity &&
+sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity kdenlive &&
 
 # Meteor
 # curl https://install.meteor.com/ | sh &&
