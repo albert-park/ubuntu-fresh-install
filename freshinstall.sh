@@ -3,7 +3,7 @@
 # Software Versions
 sublime=sublime-text_build-3126_amd64.deb
 slack=slack-desktop-2.3.4-amd64.deb
-vscode=code*
+vscode=index.html??LinkID=760868
 
 # Initialize
 sudo apt update &&
@@ -25,29 +25,31 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 # Install programs
 sudo apt update &&
-sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx unity-tweak-tool htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity kdenlive &&
+sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity kdenlive &&
 
 # Meteor
 # curl https://install.meteor.com/ | sh &&
 
 # Sublime Text
 wget https://download.sublimetext.com/$sublime &&
-sudo dpkg -i $sublime &&
 
 # Slack
 wget https://downloads.slack-edge.com/linux_releases/$slack &&
-sudo dpkg -i $slack &&
 
 # Visual Studio Code
 wget https://go.microsoft.com/fwlink/?LinkID=760868 &&
-sudo dpkg -i $vscode &&
+
+# Skype for Linux Alpha
+wget https://go.skype.com/skypeforlinux-64-alpha.deb &&
 
 # Ghost desktop
 wget http://desktop-updates.ghost.org/download/linux &&
-sudo dpkg -i linux
+
+# Install everything
+sudo dpkg -i linux skypeforlinux-64-alpha.deb $vscode $slack $sublime &&
 
 # Start software
-sudo tlp start &&
+sudo tlp start && 
 
 # NVM
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash &&
