@@ -15,7 +15,8 @@ sudo apt-get -y autoremove &&
 sudo add-apt-repository -y ppa:linrunner/tlp &&
 sudo add-apt-repository -y ppa:synapse-core/testing &&
 sudo add-apt-repository -y ppa:ubuntu-desktop/ubuntu-make &&
-sudo add-apt-repository -y ppa:nilarimogard/webupd8 &&
+# sudo add-apt-repository -y ppa:nilarimogard/webupd8 &&
+sudo add-apt-repository -y ppa:flexiondotorg/albert &&
 sudo add-apt-repository -y ppa:noobslab/themes &&
 sudo apt-add-repository -y ppa:teejee2008/ppa &&
 
