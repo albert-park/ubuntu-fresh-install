@@ -32,10 +32,10 @@ sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser 
 
 # LMMS w/ VST support
 sudo apt install -y apt-transport-https software-properties-common wget libglibmm-2.4-1v5 &&
-sudo apt update &&
 wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.1~kxstudio1_all.deb &&
 wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
 sudo dpkg -i kxstudio-repos_9.4.1~kxstudio1_all.deb kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
+sudo apt update &&
 sudo apt install -y wine lmms-vst-full &&
 
 # Sublime Text
