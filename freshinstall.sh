@@ -15,7 +15,6 @@ sudo apt-get -y autoremove &&
 sudo add-apt-repository -y ppa:linrunner/tlp &&
 sudo add-apt-repository -y ppa:synapse-core/testing &&
 sudo add-apt-repository -y ppa:ubuntu-desktop/ubuntu-make &&
-# sudo add-apt-repository -y ppa:nilarimogard/webupd8 &&
 sudo add-apt-repository -y ppa:flexiondotorg/albert &&
 sudo add-apt-repository -y ppa:noobslab/themes &&
 sudo apt-add-repository -y ppa:teejee2008/ppa &&
@@ -26,10 +25,18 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 # Install programs
 sudo apt update &&
-sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity kdenlive lmms &&
+sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity &&
 
 # Meteor
 # curl https://install.meteor.com/ | sh &&
+
+# LMMS w/ VST support
+sudo apt install -y apt-transport-https software-properties-common wget libglibmm-2.4-1v5 &&
+sudo apt update &&
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.1~kxstudio1_all.deb &&
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
+sudo dpkg -i kxstudio-repos_9.4.1~kxstudio1_all.deb kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
+sudo apt install -y wine lmms-vst-full &&
 
 # Sublime Text
 wget https://download.sublimetext.com/$sublime &&
