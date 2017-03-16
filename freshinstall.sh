@@ -12,6 +12,7 @@ sudo apt -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 
 # Add repos
+sudo apt install -y software-properties-common &&
 sudo add-apt-repository -y ppa:linrunner/tlp &&
 sudo add-apt-repository -y ppa:synapse-core/testing &&
 sudo add-apt-repository -y ppa:ubuntu-desktop/ubuntu-make &&
@@ -31,7 +32,7 @@ sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser 
 # curl https://install.meteor.com/ | sh &&
 
 # LMMS w/ VST support
-sudo apt install -y apt-transport-https software-properties-common wget libglibmm-2.4-1v5 &&
+sudo apt install -y apt-transport-https wget libglibmm-2.4-1v5 &&
 wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.1~kxstudio1_all.deb &&
 wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
 sudo dpkg -i kxstudio-repos_9.4.1~kxstudio1_all.deb kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
