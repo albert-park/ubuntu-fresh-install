@@ -26,7 +26,7 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 # Install programs
 sudo apt update &&
-sudo apt install -y nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux &&
+sudo apt install -y linux-lowlatency nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux &&
 
 # Meteor
 # curl https://install.meteor.com/ | sh &&
@@ -37,7 +37,7 @@ wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-re
 wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
 sudo dpkg -i kxstudio-repos_9.4.1~kxstudio1_all.deb kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
 sudo apt update &&
-sudo apt install -y wine-stable lmms-vst-full &&
+# sudo apt install -y wine-stable lmms-vst-full &&
 
 # Sublime Text
 wget https://download.sublimetext.com/$sublime &&
