@@ -26,7 +26,7 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 # Install programs
 sudo apt update &&
-sudo apt install -y linux-lowlatency nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux &&
+sudo apt install -y linux-lowlatency gnome-system-monitor gnome-disk-utility nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux &&
 
 # Meteor
 # curl https://install.meteor.com/ | sh &&
