@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Software Versions
-sublime=sublime-text_build-3126_amd64.deb
+sublime=sublime-text_build-3143_amd64.deb
 slack=slack-desktop-2.3.4-amd64.deb
 vscode=index.html??LinkID=760868
 
