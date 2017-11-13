@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Software Versions
-sublime=sublime-text_build-3126_amd64.deb
 slack=slack-desktop-2.3.4-amd64.deb
 vscode=index.html??LinkID=760868
 
@@ -26,21 +25,15 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 # Install programs
 sudo apt update &&
-sudo apt install -y linux-lowlatency gnome-system-monitor gnome-disk-utility nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux guitarix rakarrack &&
+sudo apt install -y linux-lowlatency gnome-system-monitor gnome-disk-utility nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux guitarix rakarrack apt-transport-https &&
 
 # Meteor
-# curl https://install.meteor.com/ | sh &&
-
-# LMMS w/ VST support
-sudo apt install -y apt-transport-https wget libglibmm-2.4-1v5 &&
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_9.4.1~kxstudio1_all.deb &&
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
-sudo dpkg -i kxstudio-repos_9.4.1~kxstudio1_all.deb kxstudio-repos-gcc5_9.4.1~kxstudio1_all.deb &&
-sudo apt update &&
-# sudo apt install -y wine-stable lmms-vst-full &&
+curl https://install.meteor.com/ | sh &&
 
 # Sublime Text
-wget https://download.sublimetext.com/$sublime &&
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
+echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
+
 
 # Slack
 wget https://downloads.slack-edge.com/linux_releases/$slack &&
@@ -55,7 +48,9 @@ wget https://go.skype.com/skypeforlinux-64-alpha.deb &&
 wget http://desktop-updates.ghost.org/download/linux &&
 
 # Install everything
-sudo dpkg -i linux skypeforlinux-64-alpha.deb $vscode $slack $sublime &&
+sudo apt update &&
+sudp apt install sublime-text &&
+sudo dpkg -i linux skypeforlinux-64-alpha.deb $vscode $slack &&
 
 # Start software
 sudo tlp start && 
@@ -64,7 +59,7 @@ sudo tlp start &&
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash &&
 
 # Remove debs
-sudo rm $sublime $slack $vscode &&
+sudo rm $slack $vscode &&
 
 sudo apt update &&
 sudo apt -y upgrade &&
