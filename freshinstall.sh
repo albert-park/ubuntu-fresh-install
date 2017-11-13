@@ -3,6 +3,7 @@
 # Software Versions
 slack=slack-desktop-2.3.4-amd64.deb
 vscode=index.html??LinkID=760868
+gitkraken=gitkraken-amd64.deb
 
 # Initialize
 sudo apt update &&
@@ -46,10 +47,13 @@ wget https://go.skype.com/skypeforlinux-64-alpha.deb &&
 # Ghost desktop
 wget http://desktop-updates.ghost.org/download/linux &&
 
+# GitKraken 
+wget https://www.gitkraken.com/download/linux-deb &&
+
 # Install everything
 sudo apt update &&
 sudp apt install sublime-text &&
-sudo dpkg -i linux skypeforlinux-64-alpha.deb $vscode $slack &&
+sudo dpkg -i linux skypeforlinux-64-alpha.deb $vscode $slack $gitkraken&&
 
 # Start software
 sudo tlp start && 
@@ -58,7 +62,7 @@ sudo tlp start &&
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash &&
 
 # Remove debs
-sudo rm $slack $vscode &&
+sudo rm $slack $vscode $gitkraken &&
 
 sudo apt update &&
 sudo apt -y upgrade &&
