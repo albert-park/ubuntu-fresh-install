@@ -2,7 +2,6 @@
 
 # Software Versions
 slack=slack-desktop-2.3.4-amd64.deb
-vscode=index.html??LinkID=760868
 gitkraken=gitkraken-amd64.deb
 
 # Initialize
@@ -20,13 +19,9 @@ sudo add-apt-repository -y ppa:flexiondotorg/albert &&
 sudo add-apt-repository -y ppa:noobslab/themes &&
 sudo apt-add-repository -y ppa:teejee2008/ppa &&
 
-# Spotify
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 &&
-echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list &&
-
 # Install programs
 sudo apt update &&
-sudo apt install -y linux-lowlatency gnome-system-monitor gnome-disk-utility nautilus-dropbox spotify-client virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux guitarix rakarrack apt-transport-https &&
+sudo apt install -y snapd linux-lowlatency gnome-system-monitor gnome-disk-utility nautilus-dropbox virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux guitarix rakarrack apt-transport-https &&
 
 # Meteor
 curl https://install.meteor.com/ | sh &&
@@ -38,14 +33,8 @@ echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/source
 # Slack
 wget https://downloads.slack-edge.com/linux_releases/$slack &&
 
-# Visual Studio Code
-wget https://go.microsoft.com/fwlink/?LinkID=760868 &&
-
 # Skype for Linux Alpha
 wget https://go.skype.com/skypeforlinux-64-alpha.deb &&
-
-# Ghost desktop
-wget http://desktop-updates.ghost.org/download/linux &&
 
 # GitKraken 
 wget https://www.gitkraken.com/download/linux-deb &&
@@ -53,7 +42,7 @@ wget https://www.gitkraken.com/download/linux-deb &&
 # Install everything
 sudo apt update &&
 sudp apt install sublime-text &&
-sudo dpkg -i linux skypeforlinux-64-alpha.deb $vscode $slack $gitkraken&&
+sudo dpkg -i linux skypeforlinux-64-alpha.deb $slack $gitkraken&&
 
 # Start software
 sudo tlp start && 
@@ -68,6 +57,9 @@ sudo apt update &&
 sudo apt -y upgrade &&
 sudo apt -y dist-upgrade &&
 sudo apt-get -y autoremove &&
+
+# Snap Installs
+sudo snap install spotify ghost-desktop brave vscode &&
 
 # Store github creds
 git config credential.helper store &&
