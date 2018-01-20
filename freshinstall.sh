@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Software Versions
-slack=slack-desktop-2.3.4-amd64.deb
 gitkraken=gitkraken-amd64.deb
 
 # Initialize
@@ -21,7 +20,7 @@ sudo apt-add-repository -y ppa:teejee2008/ppa &&
 
 # Install programs
 sudo apt update &&
-sudo apt install -y snapd linux-lowlatency gnome-system-monitor gnome-disk-utility nautilus-dropbox virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu audacity playonlinux guitarix rakarrack apt-transport-https &&
+sudo apt install -y snapd linux-lowlatency gnome-system-monitor gnome-disk-utility nautilus-dropbox virtualbox chromium-browser keepassx htop powertop ubuntu-restricted-extras pepperflashplugin-nonfree tlp ubuntu-make albert dconf-editor nodejs-legacy screenfetch psensor nmon ukuu playonlinux apt-transport-https darktable &&
 
 # Meteor
 curl https://install.meteor.com/ | sh &&
@@ -29,9 +28,6 @@ curl https://install.meteor.com/ | sh &&
 # Sublime Text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - &&
 echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list &&
-
-# Slack
-wget https://downloads.slack-edge.com/linux_releases/$slack &&
 
 # Skype for Linux Alpha
 wget https://go.skype.com/skypeforlinux-64-alpha.deb &&
@@ -42,7 +38,7 @@ wget https://www.gitkraken.com/download/linux-deb &&
 # Install everything
 sudo apt update &&
 sudp apt install sublime-text &&
-sudo dpkg -i linux skypeforlinux-64-alpha.deb $slack $gitkraken&&
+sudo dpkg -i linux skypeforlinux-64-alpha.deb $gitkraken &&
 
 # Start software
 sudo tlp start && 
@@ -51,7 +47,7 @@ sudo tlp start &&
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash &&
 
 # Remove debs
-sudo rm $slack $vscode $gitkraken &&
+sudo rm $gitkraken &&
 
 sudo apt update &&
 sudo apt -y upgrade &&
@@ -59,7 +55,7 @@ sudo apt -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 
 # Snap Installs
-sudo snap install spotify ghost-desktop brave vscode &&
+sudo snap install spotify ghost-desktop brave vscode slack &&
 
 # Store github creds
 git config credential.helper store &&
