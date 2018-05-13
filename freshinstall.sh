@@ -37,7 +37,7 @@ wget https://www.gitkraken.com/download/linux-deb &&
 
 # Install everything
 sudo apt update &&
-sudp apt install sublime-text &&
+sudo apt install sublime-text &&
 sudo dpkg -i linux skypeforlinux-64-alpha.deb $gitkraken &&
 
 # Start software
