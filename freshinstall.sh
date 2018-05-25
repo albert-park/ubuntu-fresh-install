@@ -26,11 +26,6 @@ wget https://go.skype.com/skypeforlinux-64-alpha.deb &&
 # GitKraken 
 wget https://www.gitkraken.com/download/linux-deb &&
 
-# Install everything
-sudo apt update &&
-sudo apt install sublime-text &&
-# sudo dpkg -i skypeforlinux-64-alpha.deb $gitkraken &&
-
 # Start software
 sudo tlp start && 
 
