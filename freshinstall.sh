@@ -9,13 +9,12 @@ sudo apt-get -y autoremove &&
 # Add repos
 sudo apt install -y software-properties-common &&
 sudo add-apt-repository -y ppa:linrunner/tlp &&
-sudo add-apt-repository -y ppa:flexiondotorg/albert &&
 # sudo add-apt-repository -y ppa:noobslab/themes &&
 sudo apt-add-repository -y ppa:teejee2008/ppa &&
 
 # Install programs
 sudo apt update &&
-sudo apt install -y snapd linux-lowlatency chromium-browser keepassxc powertop tlp albert nodejs neofetch ukuu nvtop npm python3 python3-pip python-is-python3&&
+sudo apt install -y snapd linux-lowlatency chromium-browser keepassxc powertop tlp nodejs neofetch ukuu nvtop npm python3 python3-pip python-is-python3&&
 
 # Start software
 sudo tlp start && 
