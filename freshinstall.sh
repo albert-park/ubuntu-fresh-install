@@ -6,24 +6,22 @@ sudo apt -y upgrade &&
 sudo apt -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 
-# Add repos
-sudo apt install -y software-properties-common &&
-sudo add-apt-repository -y ppa:linrunner/tlp &&
-# sudo add-apt-repository -y ppa:noobslab/themes &&
-sudo apt-add-repository -y ppa:teejee2008/ppa &&
+# Apt
+sudo apt install -y build-essential software-properties-common linux-lowlatency powertop tlp nodejs neofetch nvtop npm python3 python3-pip python-is-python3 docker.io input-remapper tilix gnome-system-monitor &&
 
-# Install programs
-sudo apt update &&
-sudo apt install -y snapd linux-lowlatency chromium-browser keepassxc powertop tlp nodejs neofetch ukuu nvtop npm python3 python3-pip python-is-python3&&
+# Flatpak
+flatpak update -y &&
+flatpak install -y brave firefox typora chromium &&
 
 # Start software
 sudo tlp start && 
 
 # NVM
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash &&
+nvm install stable &&
 
-# Remove debs
-# sudo rm $gitkraken &&
+# Docker
+sudo usermod -aG docker $USER -y &&
 
 sudo apt update &&
 sudo apt -y upgrade &&
@@ -35,6 +33,9 @@ git config credential.helper store &&
 
 # Swappiness
 sudo bash -c "echo 'vm.swappiness = 10' >> /etc/sysctl.conf" &&
+
+# Neofetch
+echo 'neofetch' >> ~/.bashrc &&
 
 # Reboot
 sudo reboot
