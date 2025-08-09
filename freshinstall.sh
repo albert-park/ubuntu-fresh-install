@@ -7,11 +7,14 @@ sudo apt -y dist-upgrade &&
 sudo apt-get -y autoremove &&
 
 # Apt
-sudo apt install -y build-essential software-properties-common linux-lowlatency powertop tlp nodejs neofetch nvtop npm python3 python3-pip python-is-python3 docker.io input-remapper tilix gnome-system-monitor &&
+sudo apt install -y build-essential docker.io gnome-system-monitor \
+    input-remapper linux-lowlatency neofetch nodejs npm nvtop \
+    powertop python3 python3-pip python-is-python3 python3-poetry \
+    software-properties-common tilix tlp &&
 
 # Flatpak
 flatpak update -y &&
-flatpak install -y brave firefox typora chromium &&
+flatpak install -y brave firefox typora reaper obsidian &&
 
 # Start software
 sudo tlp start && 
